@@ -1,13 +1,12 @@
 
 //- _images.jade
 
-
 script#image-template( type='text/template' )
     .dummy
         .col-xs-12.col-md-4
             .image.thumbnail( data-image='{ jsonData }' )
-                a( href='http://dev.emotionloop.com/uploads/{ fileName }', target='_blank' )
-                    img( src='http://dev.emotionloop.com/uploads/{ thumbnail }', alt='{ name }' )
+                a( href='#{ uploadsURL }{ fileName }', target='_blank' )
+                    img( src='#{ uploadsURL }{ thumbnail }', alt='{ name }' )
                 .inner-actions.hidden-xs.clearfix
                     .col-xs-6
                         a.image-edit( href='#' ) Edit

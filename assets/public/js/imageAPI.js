@@ -2,7 +2,7 @@
     'use strict';
 
     window.ImageAPI = function() {
-        var url = '/image';
+        var url = 'image';
 
         return {
             get: function( limit, page ) {

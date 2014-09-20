@@ -21,13 +21,14 @@ exports = module.exports = function() {
             assetsDir: assetsDir,
             publicDir: publicDir,
             uploadsDir: uploadsDir,
+            uploadsURL: 'http://localhost/uploads/',
             // views
             views: {
                 dir: viewsDir,
                 engine: 'jade'
             },
             session: {
-                secret: 'filebox.js-change-me',
+                secret: 'filebox.js',
                 key: 'filebox.js',
                 cookie: {
                     maxAge: maxAge * 30
@@ -46,16 +47,16 @@ exports = module.exports = function() {
                 maxAge: maxAge
             },
             server: {
-                host: '0.0.0.0',
+                host: '127.0.0.1',
                 cluster: false,
                 ssl: {
                     enabled: false,
                     options: {}
                 }
             },
-            cookieParser: 'filebox.js-change-me',
+            cookieParser: 'filebox.js',
             csrf: {
-                enabled: true,
+                enabled: false,
                 options: {
                     cookie: {
                         maxAge: maxAge
@@ -74,7 +75,7 @@ exports = module.exports = function() {
                 host: 'localhost',
                 port: 6379,
                 maxAge: maxAge * 30,
-                prefix: 'fileboxjs-change-me'
+                prefix: 'fileboxjs'
             },
             output: {
                 handleExceptions: false,
@@ -140,7 +141,7 @@ exports = module.exports = function() {
             server: {
                 env: 'production',
                 port: 3080,
-                cluster: true
+                cluster: false
             },
             mongo: {
                 dbname: 'fileboxjs',

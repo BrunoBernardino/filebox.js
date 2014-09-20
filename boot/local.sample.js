@@ -8,6 +8,7 @@ exports = module.exports = function() {
 
     return {
         uploadsDir: uploadsDir,
+        uploadsURL: 'http://localhost/uploads/',
         server: {
             host: '0.0.0.0',
             env: 'local',
