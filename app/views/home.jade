@@ -1,0 +1,16 @@
+
+//- # home
+
+extends layout
+
+block content
+    .container#fileboxjs
+        .row.visible-xs
+            span.btn.btn-primary.btn-lg.upload-btn
+                span Upload File
+                input.fileupload( type='file', name='file' )
+        .row
+            #images-list.clearfix
+                include _loader.jade
+
+        include _images.jade

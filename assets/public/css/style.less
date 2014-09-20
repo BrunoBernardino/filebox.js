@@ -1,0 +1,107 @@
+body {
+    padding-top: 70px;
+}
+
+.upload-btn {
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 10px auto;
+    text-transform: uppercase;
+
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        -ms-filter: 'alpha(opacity=0)';
+        font-size: 200px;
+        direction: ltr;
+        cursor: pointer;
+    }
+}
+
+.upload-icon {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 12px 15px 10px;
+    color: #777;
+    font-size: 20px;
+
+    &:hover {
+        color: #333;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        -ms-filter: 'alpha(opacity=0)';
+        font-size: 200px;
+        direction: ltr;
+        cursor: pointer;
+    }
+}
+
+.loader {
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: block;
+    vertical-align: top;
+
+    svg {
+        path, rect {
+            fill: #333;
+        }
+    }
+}
+
+.align-right {
+    text-align: right;
+}
+
+#images-list {
+    .image {
+        &:hover {
+            .inner-actions {
+                opacity: 1;
+                -ms-filter: 'alpha(opacity=1)';
+            }
+        }
+
+        .inner-actions {
+            background: rgba( 0,0,0, 0.4 );
+            position: relative;
+            margin-top: -40px;
+            padding: 10px;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+
+            a {
+                display: inline-block;
+                color: #fff;
+
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+
+        .outer-actions {
+            margin: 10px 0;
+        }
+
+        img {
+            min-height: 40px;// To allow room for the .inner-actions
+        }
+    }
+}

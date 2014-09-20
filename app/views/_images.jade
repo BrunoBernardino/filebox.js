@@ -1,0 +1,52 @@
+
+//- _images.jade
+
+
+script#image-template( type='text/template' )
+    .dummy
+        .col-xs-12.col-md-4
+            .image.thumbnail( data-image='{ jsonData }' )
+                a( href='http://dev.emotionloop.com/uploads/{ fileName }', target='_blank' )
+                    img( src='http://dev.emotionloop.com/uploads/{ thumbnail }', alt='{ name }' )
+                .inner-actions.hidden-xs.clearfix
+                    .col-xs-6
+                        a.image-edit( href='#' ) Edit
+                    .col-xs-6.align-right
+                        a.image-delete( href='#' ) Delete
+                .outer-actions.visible-xs.clearfix
+                    .col-xs-6
+                        button.btn.btn-default.image-edit( type='button', role='button' ) Edit
+                    .col-xs-6.align-right
+                        button.btn.btn-danger.image-delete( type='button', role='button' ) Delete
+        .clearfix.visible-xs
+
+#image-edit.modal.fade( tabindex='-1', role='dialog', aria-labelledby='modalTitle', aria-hidden='true' )
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close( type='button', data-dismiss='modal' )
+                    span( aria-hidden='true' ) &times;
+                    span.sr-only Close
+                h4.modal-title#modalTitle Edit File
+            .modal-body
+                form.clearfix#frm-image-edit( role='form' )
+                    input( type='hidden', id='img-id' )
+                    .form-group
+                        label Filename
+                        p: span#img-fileName loading...
+                    .row
+                        .form-group.col-xs-6
+                            label( for='img-name' ) Name
+                            input.form-control( id='img-name', placeholder='File Name, for later searching' )
+                        .form-group.col-xs-6
+                            label( for='img-sort' ) Sort
+                            input.form-control( id='img-sort', value='99', type='number', step='1' )
+                        .clearfix
+                    .form-group
+                        label( for='img-tags' ) Tags
+                        input.form-control( id='img-tags', placeholder='Comma-separated.' )
+            .modal-footer
+                button.btn.btn-default( type='button' data-dismiss='modal' ) Cancel
+                button.btn.btn-primary( type='button' ) Save Changes
+        </div>
+    </div>
