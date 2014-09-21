@@ -7,6 +7,7 @@ var pkg = require( path.join(__dirname, '..', 'package') );
 var assetsDir = path.join( __dirname, '..', 'assets' );
 var publicDir = path.join( assetsDir, 'public' );
 var uploadsDir = path.join( __dirname, '..', '..', 'uploads' );
+var testsUploadsDir = path.join( __dirname, '..', 'uploads' );
 var viewsDir = path.join( __dirname, '..', 'app', 'views' );
 var maxAge = 24 * 60 * 60 * 1000;
 
@@ -104,6 +105,7 @@ exports = module.exports = function() {
         },
 
         test: {
+            uploadsDir: testsUploadsDir,
             csrf: {
                 enabled: false
             },

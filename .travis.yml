@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '0.10'
+services:
+- redis-server
+- mongodb
+before_script:
+- mkdir uploads
+- cp generic.png uploads/
+script: npm run-script test-travis
+after_script:
+- npm install -g coveralls@2
+- cat ./coverage/lcov.info | coveralls
+- npm install -g codeclimate-test-reporter
+- cat ./coverage/lcov.info | codeclimate
+addons:
+  code_climate:
+    repo_token:
+      secure: "i2Pg/Pl6MYM2peoYT/Oiyvj5POtBeKXoIiyOPBNFQbQxgazF6kYGlHPeA0N4BlK/oKlLKG2qY913R+VYMLzBMifgXBeT+BBnJDHS6lE7etqbEE3Hs2XH/McgUN9VTpTWNvmVJzUxjbIEfUrpBJ6TVJijl9oDMEiNQNbH30GdKy8="

@@ -129,6 +129,10 @@ exports = module.exports = function( Image, settings ) {
             }
         ], function( err, imageData ) {
 
+            if ( err ) {
+                return next( err );
+            }
+
             var newImage = {
                 fileName: imageData.fileName,
                 name: imageData.name,

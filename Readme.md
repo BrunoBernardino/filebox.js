@@ -1,5 +1,9 @@
 # filebox.js
 
+[![Build Status](http://img.shields.io/travis/BrunoBernardino/filebox.js.svg?style=flat)](http://travis-ci.org/BrunoBernardino/filebox.js)
+[![Coverage Status](https://coveralls.io/repos/BrunoBernardino/filebox.js/badge.png)](https://coveralls.io/r/BrunoBernardino/filebox.js)
+[![Code Climate](https://codeclimate.com/github/BrunoBernardino/filebox.js/badges/gpa.svg)](https://codeclimate.com/github/BrunoBernardino/filebox.js)
+
 filebox.js is just a simple and personal file hosting system.
 
 This is **not** a complex system with auth or permissions. For that I use and recommend [SugarSync](https://www.sugarsync.com/), [Dropbox](https://www.dropbox.com/), or [Google Drive](https://drive.google.com).
@@ -56,7 +60,7 @@ There's a lot of [information and possibilities if you want to run the app in pr
 
 ## Test
 
-`$ export NODE_ENV=test && npm test` for e2e tests
+`$ npm test` for e2e tests
 
 ## Development
 
