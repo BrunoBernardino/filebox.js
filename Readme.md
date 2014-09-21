@@ -4,9 +4,23 @@ filebox.js is just a simple and personal file hosting system.
 
 This is **not** a complex system with auth or permissions. For that I use and recommend [SugarSync](https://www.sugarsync.com/), [Dropbox](https://www.dropbox.com/), or [Google Drive](https://drive.google.com).
 
-## Screenshot
+Currently at version 0.0.1
 
-![](http://share.brunobernardino.com/dfd5e2fe473a3b8.png)
+## Screenshots
+
+![](http://share.brunobernardino.com/dfd5e2fe473a3b8.png) ![](http://share.brunobernardino.com/a04499fcbfbf88d.png)
+
+## Current Features
+
+- Supports drag & drop to upload
+- Supports 1 file at a time (multiple files on TODO)
+- Load more images on scroll
+- Mobile first approach
+  - For design
+  - For bandwidth/screen-size (each "page" downloads only how many images fit per screen)
+  - Shows thumbnails instead of the actual images when listing
+- All file types supported
+- No file size limit (it'll be limited by your server settings)
 
 ## Pre-requisites
 
@@ -24,7 +38,7 @@ $ npm install -g gulp
 2. Run `$ npm install -d`
 3. Run `$ gulp build`
 
-## Configure
+## Configure/Setup
 
 1. Copy `./generic.png` to your `uploads/` directory (default config needs it in `../uploads`).
 2. Create a `boot/local.js` if you're developing locally. It's not versioned, but you can copy it from `boot/local.sample.js`
@@ -54,8 +68,9 @@ I follow these [coding standards/guidelines](http://jscode.org/readable).
 
 ## TODOs
 
-- Make search work
 - Make upload show a progress bar instead of just a loading icon
+- Support multiple files upload
+- Make search work
 - Actually fetch tags to show them "prettier" when editing an image
 - Update `db.tags` whenever a file is updated
 - Make it consistent in the code to have/say `file` instead of `image`, since it does allow anything to be uploaded.

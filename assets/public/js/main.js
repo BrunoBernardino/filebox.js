@@ -21,6 +21,7 @@
 
         // Allow uploads from dedicated button
         $( '.upload-btn .fileupload' ).fileupload({
+            dropZone: $( '#dropzone' ),
             url: 'image/',
             dataType: 'json',
             done: function( event, result ) {
@@ -37,6 +38,43 @@
         // Hide loading when an upload ends
         $( document ).on( 'fileuploadalways.app', function( event, data ) {
             window.hideLoading( '#images-list' );
+        });
+
+        // Show #dropzone when files are dragged
+        $( document ).on('dragover', function (e) {
+            var $dropZone = $('#dropzone'),
+                timeout = window.dropZoneTimeout;
+
+            if ( ! timeout ) {
+                $dropZone.addClass( 'in' );
+                $dropZone.css( 'line-height', $dropZone.outerHeight() + 'px' );
+            } else {
+                clearTimeout( timeout );
+            }
+
+            var found = false,
+                node = e.target;
+
+            do {
+                if ( node === $dropZone[0] ) {
+                    found = true;
+                    break;
+                }
+
+                node = node.parentNode;
+
+            } while ( node !== null );
+
+            if ( found ) {
+                $dropZone.addClass( 'hover' );
+            } else {
+                $dropZone.removeClass( 'hover' );
+            }
+
+            window.dropZoneTimeout = setTimeout( function () {
+                window.dropZoneTimeout = null;
+                $dropZone.removeClass( 'in hover' );
+            }, 100 );
         });
 
         // Allow uploads from navbar icon

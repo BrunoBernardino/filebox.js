@@ -83,6 +83,11 @@ exports = module.exports = function( Image, settings ) {
                 var filePath = path.join( settings.uploadsDir, imageData.fileName );
                 var thumbnailPath = path.join( settings.uploadsDir, imageData.thumbnail );
 
+                // Use gif's first frame only for the thumbnail
+                if ( reqFile.extension.toLowerCase() === 'gif' ) {
+                    filePath += '[0]';
+                }
+
                 // Generate thumbnail
                 easyimage.rescrop(
                     {
