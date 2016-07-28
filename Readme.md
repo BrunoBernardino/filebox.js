@@ -12,7 +12,7 @@ Currently at version 0.0.1
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot.png) ![](ttps://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot-mobile.png)
+![](https://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot.png) ![](https://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot-mobile.png)
 
 ## Current Features
 
