@@ -1,7 +1,7 @@
 # filebox.js
 
 [![Build Status](http://img.shields.io/travis/BrunoBernardino/filebox.js.svg?style=flat)](http://travis-ci.org/BrunoBernardino/filebox.js)
-[![Coverage Status](https://coveralls.io/repos/BrunoBernardino/filebox.js/badge.png)](https://coveralls.io/r/BrunoBernardino/filebox.js)
+[![Coverage Status](https://coveralls.io/repos/BrunoBernardino/filebox.js/badge.svg)](https://coveralls.io/r/BrunoBernardino/filebox.js)
 [![Code Climate](https://codeclimate.com/github/BrunoBernardino/filebox.js/badges/gpa.svg)](https://codeclimate.com/github/BrunoBernardino/filebox.js)
 
 filebox.js is just a simple and personal file hosting system.
@@ -12,7 +12,7 @@ Currently at version 0.0.1
 
 ## Screenshots
 
-![](http://share.brunobernardino.com/dfd5e2fe473a3b8.png) ![](http://share.brunobernardino.com/a04499fcbfbf88d.png)
+![](https://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot.png) ![](ttps://raw.githubusercontent.com/BrunoBernardino/filebox.js/master/assets/public/img/screenshot-mobile.png)
 
 ## Current Features
 
